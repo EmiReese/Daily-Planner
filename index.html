@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- BOOTSTRAP LINK -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- FONT AWESOME-->
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    /> 
+<!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+<!-- MAIN -->
+  <body>
+  <!-- HEADER -->
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+
+  <!-- CALENDER -->
+
+    <div class="container" >
+        <!-- HOUR ROWS -->
+        <!-- Our time blocks have icons and places to submit your events/appointments for the day -->
+      <section class="row" id= "nineAM">
+        <span class="time">9 AM </span>
+        <form id="target" action="localStorage">
+          <input type="text" value="Appointment here" id="textInput" name="textAppt">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+        <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 2 -->
+      <section class="row" id="tenAM">
+        <span class="time">10 AM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+          <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 3 -->
+      <section class="row" id="elevenAM">
+        <span class="time">11 AM </span>a
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here" >
+          <button type="submit" value="Add" id="addBtn">Add</button>
+          
+        </form>
+       <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 4 -->
+      <section class="row" id="twelvePM">
+        <span class="time">12 PM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+      <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 5 -->
+      <section class="row" id="onePM">
+        <span class="time">1 PM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+   <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 6 -->
+      <section class="row" id="twoPM">
+        <span class="time">2 PM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+      <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 7 -->
+      <section class="row" id="threePM">
+        <span class="time">3 PM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+        <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 8 -->
+      <section class="row"id="fourPM">
+        <span class="time">4 PM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+     <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+<!-- ROW 9 -->
+      <section class="row" id="fivePM">
+        <span class="time">5 PM </span>
+        <form id="target" action="destination.html">
+          <input type="text" value="Insert appointment here" id="answerBox">
+          <button type="submit" value="Add" id="addBtn">Add</button>
+        </form>
+      <!-- ICON -->
+        <i class="fas fa-calendar-check"></i>
+      </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </body>
+</html>
