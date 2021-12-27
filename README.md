@@ -4,4 +4,4 @@ This project is created to be a daily planner that will tell the current time an
 
 URL- https://emireese.github.io/Daily-Planner/
 
-<img width="1680" alt="Screen Shot 2021-12-24 at 11 28 48 PM" src="https://user-images.githubusercontent.com/87937862/147377422-4a1dcab2-b78b-4941-895c-03369c4f11eb.png">
+<img width="1680" alt="Screen Shot 2021-12-26 at 10 11 10 PM" src="https://user-images.githubusercontent.com/87937862/147430533-65b49dcf-66cf-4a00-87aa-d6125c66320c.png">
