@@ -1,75 +1,76 @@
 
-var rows = $('#row');
-var targetEl =$('#target');
-var addBtnEl =$('#addBtn');
-var formEl = $('form');
-var containerEl = $('container')
-
-
-
-
 // HELPFUL NOTES :
-
-// This could be helpful for the time problem
-// jQuery.when()
-// Provides a way to execute callback functions based on zero or more Thenable objects, usually Deferred objects that represent asynchronous events. 
 
 // This could be helpful storing our data
 // jQuery.data()
 // Store arbitrary data associated with the specified element and/or return the value that was set.
 
 // jQuery.parseJSON()
-// Takes a well-formed JSON string and returns the resulting JavaScript value.
+// Takes a well-formed JSON string and returns the resulting JavaScript value.---------------------------------------------------------
 
-// .fadeIn()
-// Display the matched elements by fading them to opaque.
+//Appointment class
+class Appt {
+    constructor(hour, appt) {
+        this.hour= hour;
+        this.appt = appt;
+    }
+}
+//UI class
+class UI {
+static displayAppt () {
+    var appts = Store.getAppts();
 
-// .fadeOut()
-// Hide the matched elements by fading them to transparent.
+
+appts.forEach((appt) => UI.addApptToForm (appt));
+ }
+  static addApptToForm(appt) {
+    var form = document.querySelector('#target');
+  }
+};
+    
+
+//Storage class
+class Store {
+static getAppts(){
+     let appts;
+     if (localStorage.getItem('appts') === null){
+         appts = [];
+     }
+     else {
+         appts = JSON.parse(localStorage.getItem('appts'));
+     }
+     return appts;
+}
 
 
+static addAppt(appt){
+    var appts = Store.getAppts();
+
+    appts.push('appt');
+    localStorage.setItem('appts', JSON.stringify(appts));
+}
+}
+
+//Event: display appointmens
+document.addEventListener('DOMContentLoaded', UI.DisplayAppts);
 
 
+//Event: Add an appointment
+document.querySelector('#target').addEventListener('submit', (e) =>
+{
+e.preventDefault();
+var hour = document.querySelector('.row').value;
+var appointment = document.querySelector('.col-6').value;
 
+//instatiate appointment 
 
-//This part of my Jquery/JS is supposed to control the users input (event/appointment) for that hour.
-// var containerEl = [{
-//      {
-//           hour: '9 am',
-//           userInput:  ' ',
-//           },
-//      {
-//           hour: '10 am',
-//           userInput:  ' ',
-//      },
-//       {
-//           hour: '11 am',
-//           userInput:  ' ',
-//       },
-//       {
-//           hour: '12 pm',
-//           userInput:  ' ',
-//       },
-//       {
-//           hour: '1 pm',
-//           userInput:  ' ',
-//       },
-//       {
-//           hour: '2pm',
-//           userInput:  ' ',
-//       },
-//      {
-//           hour: '3 pm',
-//           userInput:  ' ',
-//      },
-//      {
-//           hour: '4 pm',
-//           userInput:  ' ',
-//      },
-//      {
-//           hour: '5 pm',
-//           userInput:  ' ',
-//      },
-// }
-// }]; 
+var appt = new Appt(appt);
+
+UI.addApptToForm(appt);
+
+// add appt to Store
+Store.addAppt(appt);
+
+});
+
 
