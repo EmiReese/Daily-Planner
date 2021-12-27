@@ -9,12 +9,12 @@
 // Takes a well-formed JSON string and returns the resulting JavaScript value.---------------------------------------------------------
 
 //Appointment class
-class Appt {
-    constructor(hour, appt) {
-        this.hour= hour;
-        this.appt = appt;
-    }
-}
+// class Appt {
+//     constructor(hour, appt) {
+//         this.hour= hour;
+//         this.appt = appt;
+//     }
+// }
 //UI class
 class UI {
 static displayAppt () {
@@ -46,7 +46,7 @@ static getAppts(){
 static addAppt(appt){
     var appts = Store.getAppts();
 
-    appts.push('appt');
+    appts.push(appt);
     localStorage.setItem('appts', JSON.stringify(appts));
 }
 }
@@ -64,7 +64,7 @@ var appointment = document.querySelector('.col-6').value;
 
 //instatiate appointment 
 
-var appt = new Appt(appt);
+var appt = new Appt(hour, appt);
 
 UI.addApptToForm(appt);
 
@@ -73,4 +73,15 @@ Store.addAppt(appt);
 
 });
 
+var btn1 = document.getElementById('addBtn1');
+var textInput1= document.getElementById('textInput1');
 
+btn1.addEventListener('click', function () {
+localStorage.setItem('text1', textInput1.value)
+});
+
+function getItems(){
+        var storedText = localStorage.getItem('text1');
+        textInput1.textContent = storedText;
+    }
+getItems(); 
