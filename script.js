@@ -14,6 +14,9 @@
 //         this.hour= hour;
 //         this.appt = appt;
 //     }
+var rows = document.getElementsByClassName("row");
+var form = document.querySelector('#target');
+var currentTime = new Date();
 // }
 function showTime(){
   // DATE SECTION
@@ -49,19 +52,18 @@ function showTime(){
     }
 // DISPLAY FOR DATE AND TIME 
     var myClock = document.getElementById('currentDay');
-    myClock.textContent = "" + dayArray[day] + " " + dayM + " " + monthArray[month] +
+  myClock.textContent = "" + dayArray[day] + " " + dayM + " " + monthArray[month] +
  " " + year + " | " + h + ":" + m +  ":" + s;
  myClock.innerText = "" + dayArray[day] + " " + dayM + " " + monthArray[month] +
  " " + year + " | " + h + ":" + m +  ":" + s;
 
- setTimeout("showTime()", 1000);  }
+ setTimeout("showTime()", 1000);  
+ };
 
 // CALL FUNCTION
  showTime();
-
-
-
-
+//_______________________________
+// CALENDER START
 //UI class
 class UI {
 static displayAppt () {
@@ -72,14 +74,13 @@ appts.forEach((appt) => UI.addApptToForm (appt));
  }
   static addApptToForm(appt) {
     var form = document.querySelector('#target');
-  }
-};
-    
+  }};
 
-//Storage class
+  
+//LOCAL STORAGE
 class Store {
 static getAppts(){
-     let appts;
+     var appts;
      if (localStorage.getItem('appts') === null){
          appts = [];
      }
@@ -94,7 +95,7 @@ static addAppt(appt){
     var appts = Store.getAppts();
 
     appts.push(appt);
-    localStorage.setItem('appts', JSON.stringify(appts));
+    localStorage.setItem('appts',  JSON.stringify(appts));
 }
 }
 
@@ -120,6 +121,8 @@ Store.addAppt(appt);
 
 });
 
+// WORKING STORAGE
+// 9 AM HOUR
 var btn1 = document.getElementById('addBtn1');
 var textInput1= document.getElementById('textInput1');
 
@@ -130,5 +133,135 @@ localStorage.setItem('text1', textInput1.value)
 function getItems(){
         var storedText = localStorage.getItem('text1');
         textInput1.textContent = storedText;
+    };
+
+    getItems();
+
+//_______________________________________
+
+// 10 AM HOUR
+
+
+var btn2 = document.getElementById('addBtn2');
+var textInput2= document.getElementById('textInput2');
+
+btn2.addEventListener('click', function () {
+localStorage.setItem('text2', textInput2.value)
+});
+
+function getItems2(){
+        var storedText = localStorage.getItem('text2');
+        textInput2.textContent = storedText;
     }
-getItems(); 
+getItems2();
+//_________________________________________________
+// 11 AM HOUR
+
+var btn3 = document.getElementById('addBtn3');
+var textInput3= document.getElementById('textInput3');
+
+btn3.addEventListener('click', function () {
+localStorage.setItem('text3', textInput3.value)
+});
+
+function getItems3(){
+        var storedText = localStorage.getItem('text3');
+        textInput3.textContent = storedText;
+    }
+
+    getItems3();
+//_________________________________________________
+// 12PM HOUR
+
+
+var btn4 = document.getElementById('addBtn4');
+var textInput4= document.getElementById('textInput4');
+
+btn4.addEventListener('click', function () {
+localStorage.setItem('text4', textInput4.value)
+});
+
+function getItems4(){
+        var storedText = localStorage.getItem('text4');
+        textInput4.textContent = storedText;
+    };
+//
+getItems4();
+// //___________________________________________________
+// 1 PM HOUR
+
+var btn5 = document.getElementById('addBtn5');
+var textInput5= document.getElementById('textInput5');
+
+btn5.addEventListener('click', function () {
+localStorage.setItem('text5', textInput5.value)
+});
+
+function getItems5(){
+        var storedText = localStorage.getItem('text5');
+        textInput5.textContent = storedText;
+    };
+
+    getItems5();
+// //
+// 2 PM HOUR
+var btn6 = document.getElementById('addBtn6');
+var textInput6= document.getElementById('textInput6');
+
+btn6.addEventListener('click', function () {
+localStorage.setItem('text6', textInput6.value)
+});
+
+function getItems6(){
+        var storedText = localStorage.getItem('text6');
+        textInput6.textContent = storedText;
+    };
+
+getItems6();
+// //___________________________________________________
+// 3 PM HOUR
+var btn7 = document.getElementById('addBtn7');
+var textInput7= document.getElementById('textInput7');
+
+btn7.addEventListener('click', function () {
+localStorage.setItem('text7', textInput7.value)
+});
+
+function getItems7(){
+        var storedText = localStorage.getItem('text7');
+        textInput7.textContent = storedText;
+    };
+
+getItems7();
+// // ___________________________________________________
+
+// 4 PM HOUR
+var btn8 = document.getElementById('addBtn8');
+var textInput8= document.getElementById('textInput8');
+
+btn8.addEventListener('click', function () {
+localStorage.setItem('text8', textInput8.value)
+});
+
+function getItems8(){
+        var storedText = localStorage.getItem('text8');
+        textInput8.textContent = storedText;
+    };
+getItems8(); 
+// _______________________________________________________
+
+// 5 PM HOUR
+var btn9 = document.getElementById('addBtn9');
+var textInput9= document.getElementById('textInput9');
+
+btn9.addEventListener('click', function () {
+localStorage.setItem('text9', textInput9.value)
+});
+
+function getItems9(){
+        var storedText = localStorage.getItem('text9');
+      ('.textInput9').textContent = storedText;
+    };
+
+    getItems9();
+
