@@ -1,19 +1,4 @@
 
-// HELPFUL NOTES :
-
-// This could be helpful storing our data
-// jQuery.data()
-// Store arbitrary data associated with the specified element and/or return the value that was set.
-
-// jQuery.parseJSON()
-// Takes a well-formed JSON string and returns the resulting JavaScript value.---------------------------------------------------------
-
-//Appointment class
-// class Appt {
-//     constructor(hour, appt) {
-//         this.hour= hour;
-//         this.appt = appt;
-//     }
 var rows = document.getElementsByClassName("row");
 var form = document.querySelector('#target');
 var currentTime = new Date();
@@ -59,9 +44,28 @@ function showTime(){
 
  setTimeout("showTime()", 1000);  
  };
-
 // CALL FUNCTION
  showTime();
+
+
+//  This is my attempt at getting the colors to change.
+//  function changeColor () {
+// 	var d = new Date();
+// 	var n = d.getHours();
+//   var roundedHour = Math.floor(n);
+//   var section = document.getElementsByTagName('section');
+//   var apptHour = document.getElementsByTagName('section').value;
+// 	if (apptHour === roundedHour){
+//    section.style.backgroundColor = "red";
+//   } else if ( roundedHour > apptHour){
+//    section.style.backgroundColor = "purple";
+//   }	else {
+//   section.style.backgroundColor = 
+//     "green";
+//   }
+//   changeColor();
+// };
+
 //_______________________________
 // CALENDER START
 //UI class
@@ -75,7 +79,6 @@ appts.forEach((appt) => UI.addApptToForm (appt));
   static addApptToForm(appt) {
     var form = document.querySelector('#target');
   }};
-
   
 //LOCAL STORAGE
 class Store {
@@ -120,8 +123,9 @@ UI.addApptToForm(appt);
 Store.addAppt(appt);
 
 });
-
+// ______________________________________________________
 // WORKING STORAGE
+
 // 9 AM HOUR
 var btn1 = document.getElementById('addBtn1');
 var textInput1= document.getElementById('textInput1');
